@@ -1,0 +1,345 @@
+/*
+OVERALL
+OVERALL
+OVERALL
+OVERALL
+OVERALL
+*/
+@font-face {
+    font-family: enchanted;
+    src: url(../fonts/EnchantedLand-jnX9.ttf);
+}
+body {
+    margin: 0rem;
+    background-color: lightslategray;
+}
+h1 {
+    text-align: center;
+}
+
+/*
+NAVIGATION
+NAVIGATION
+NAVIGATION
+NAVIGATION
+NAVIGATION
+*/
+nav.mainNav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    background-color: darkslategray;
+    width: 100%;
+}
+nav.mainNav a {
+    padding: 1rem;
+    margin: 0.25rem;
+    text-align: center;
+    color: black;
+    background-color: slategray;
+    border-radius: 1.5rem;
+}
+nav.mainNav a:hover {
+    background-color:cadetblue;
+}
+
+/*
+ABOUTME
+ABOUTME
+ABOUTME
+ABOUTME
+ABOUTME
+*/
+#name {
+    text-align: center;
+    font-size: 6rem;
+    font-family: enchanted;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+#meImage {
+    display: flex;
+    justify-content: center;
+}
+#meImage img {
+    width: 50%;
+}
+div.columns2 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+}
+div.columns2 div {
+    width: 25%;
+    padding: 1rem;
+    border: none;
+    margin: 3rem;
+    background-color: aquamarine;
+    border-radius: 2rem;
+}
+div.meColumn h2 {
+    text-align: center;
+}
+div.meColumn p em {
+    color: purple;
+}
+div.meColumn p strong {
+    color: blue;
+}
+
+/*
+CONTACTS
+CONTACTS
+CONTACTS
+CONTACTS
+CONTACTS
+*/
+#tableImage {
+    margin: 3rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#contactsTable {
+    max-width: 60%;
+    table-layout: fixed;
+    overflow: scroll;
+}
+#locImage {
+    margin: 3rem;
+    width: 20rem;
+}
+#contactsTable caption {
+    display: none;
+}
+#contactsTable tr th {
+    padding: 0.5rem;
+}
+#contactsTable tr td {
+    padding: 0.5rem;
+}
+#contactsTable tr td.tableLoc {
+    white-space: nowrap;
+    width: 15rem;
+}
+#contactsTable tr td address {
+    display: inline-block;
+}
+#contactsTable tr td.tableLoc img {
+    width: 5rem;
+    display: none;
+}
+#contactsTable tr:hover td.tableLoc img{
+    display: inline-block;
+}
+#contactsTable, #contactsTable td, #contactsTable th {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+#contactsTable tr:nth-child(odd) {
+    background-color: rgb(0, 255, 255);
+}
+#contactsTable tr:nth-child(even) {
+    background-color: rgb(1, 190, 190);
+}
+
+/* 
+WIDGETS
+WIDGETS
+WIDGETS
+WIDGETS
+WIDGETS
+*/
+
+div.widgetBody {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.widgetContainer {
+    width: 34em;
+    background: #ffffff;
+    padding: 1.25em;
+    margin: 5.5em auto;
+    border-radius: 0.4em;
+    /*height: 10em;*/
+    border: 2px solid gray;
+}
+.widgetContainer .widgetHeader {
+    text-align: center;
+    background-color: #FEFFED;
+    border-radius: 0.25em;
+    margin: -39px -20px 10px -20px;
+}
+.widgetContainer h2{
+    padding-top: 10px;
+}
+.widgetContainer .widgetContent {
+    margin-left: 57px;
+    margin-top: 40px;
+}
+
+/* Youtube */
+#youtube iframe {
+    border: none;
+}
+/* Password */
+
+#register label{
+    margin-right:5px;
+}
+#register input {
+    padding: 5px 14px;
+    border: 1px solid #d5d9da;
+    box-shadow: 0 0 9px #0E34F5 inset;
+    width: 272px;
+    font-size: 1em;
+    height: 25px;
+}
+#register .short{
+    font-weight:bold;
+    color:#FF0000;
+    font-size:larger;
+}
+#register .weak{
+    font-weight:bold;
+    color:orange;
+    font-size:larger;
+}
+#register .good{
+    font-weight:bold;
+    color:#2D98F3;
+    font-size:larger;
+}
+#register .strong{
+    font-weight:bold;
+    color: limegreen;
+    font-size:larger;
+}
+
+/* Weather Widget */
+.widgetContainer input {
+    width: 5em;
+}
+
+/* contactMe */
+#formCenter {
+    display: flex;
+    justify-content: space-evenly;
+}
+#contactForm {
+    width: 50%;
+    background-color: aquamarine;
+    border-radius: 3rem;
+}
+#formDiv {
+    display: flex;
+    flex-direction: row;
+}
+#formLeft {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    padding-bottom: 0rem;
+}
+#formRight {
+    display: none;
+    max-width: 40%;
+    padding: 3rem;
+    padding-bottom: 0rem;
+}
+#formRight p {
+    text-align: center;
+    border: 0.25rem solid red;
+}
+#formBottom {
+    width: 100%;
+    padding: 3rem;
+    padding-top: 0.25rem;
+}
+.reqd {
+    color: red;
+}
+
+/*
+Login
+*/
+#loginContent {
+    display: flex;
+    justify-content: center;
+}
+#loginForm {
+    width: 50%;
+    background-color: aquamarine;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+#form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem;
+}
+#form #submit {
+    margin: 1rem;
+}
+
+/*
+Logout
+*/
+#logout {
+    margin: auto;
+    width: 50%;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: aquamarine;
+    padding: 1rem;
+}
+#logout p {
+    text-align: center;
+}
+#logout form {
+    display: flex;
+    justify-content: center;
+}
+
+/*
+contactLog
+*/
+#contactLogContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#contactLogContent form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#contactLogTable {
+    align-self: center;
+    max-width: 75%;
+    overflow: scroll;
+}
+#contactLogTable tr th {
+    padding: 0.5rem;
+}
+#contactLogTable tr td {
+    padding: 0.5rem;
+}
+#contactLogTable, #contactLogTable td, #contactLogTable th {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+#contactLogTable tr:nth-child(odd) {
+    background-color: rgb(0, 255, 255);
+}
+#contactLogTable tr:nth-child(even) {
+    background-color: rgb(1, 190, 190);
+}

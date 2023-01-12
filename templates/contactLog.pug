@@ -1,0 +1,35 @@
+extends base.pug
+block title 
+    title Contact Log 
+
+block content 
+    #contactLogContent
+        h1 Messages 
+        form(action="/contactLog", method="GET")
+            input#all(type="radio" name="filter" value="All")
+            label(for='all') All
+            input#question(type="radio" name="filter" value="Question")
+            label(for='question') Question
+            input#comment(type="radio" name="filter" value="Comment")
+            label(for='comment') Comment
+            input#concern(type="radio" name="filter" value="Concern")
+            label(for='concern') Concern
+            input(type="submit" value="Filter")
+        table#contactLogTable.contactTable
+            tr#headers
+                th from 
+                th title
+                th category 
+                th message
+            each row in rows
+                tr 
+                    td.from 
+                        if row.link 
+                            a(href=row.link) #{row.username}
+                        else
+                            #{row.username}
+                        br
+                        a(href="mailto:"+row.email) #{row.email}
+                    td.title #{row.title}
+                    td.category #{row.category}
+                    td.message #{row.message}

@@ -1,0 +1,19 @@
+{
+  "name": "hw5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "connect": "ssh -L 127.0.0.1:3306:cse-mysql-classes-01.cse.umn.edu:3306 kafka050@csel-kh1250-10.cselabs.umn.edu"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mysql": "^2.18.1",
+    "pug": "^3.0.2"
+  }
+}

@@ -1,0 +1,9 @@
+extends base.pug 
+block title 
+    title welcome 
+block content 
+    h1 Welcome!
+    #logout
+        p You are currently logged in, #{username}!
+        form(action="/logout", method="GET")
+            input(type="submit" value="logout")

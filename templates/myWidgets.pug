@@ -1,0 +1,76 @@
+extends base.pug
+
+block title 
+  title My Widgets 
+
+block scripts 
+  script(async defer src='js/passwordWidget.js')
+  script(async defer src='js/timeWidget.js')
+  script(async defer src='js/weatherWidget.js')
+  script(async defer src='js/clickWidget.js')
+
+block content
+  h1 My Widgets
+  .widgetBody
+    .left
+      #youtube
+        // And that's why you'll never get in to IKON Clan
+        iframe(width='560' height='315' src='https://www.youtube.com/embed/mu0I-9FPFKU' title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+      #passwordContainer.widgetContainer
+        #header.widgetHeader
+          h2 Password Strength Checking with JS
+          hr
+        #content.widgetContent
+          form#register(name='register')
+            label(for='password') Password :
+            input#password(name='password' type='password' placeholder='Type Your Password here')
+            span#pwdresult
+      #weatherContainer.widgetContainer
+        #weatherHeader.widgetHeader
+          h2 weather
+          hr
+        #weatherContent.widgetContent
+          p#weatherStatus
+          div
+            span Coordinates:
+            input#latitude-input(type='text' placeholder='Latitude')
+            input#longitude-input(type='text' placeholder='Longitude')
+          div
+            button#find-me(type='button') Auto-Find me!
+            button#get-weather-btn(type='button') Find The Weather!
+          #weatherOutput
+            p#temp-display
+            p#cloud-cover-display
+            p#sunrise-display
+            p#sunset-display
+          // Interesting fact. We're legally required to put this here.
+          a(href='https://open-meteo.com/') Weather data by Open-Meteo.com
+          a(href='https://sunrise-sunset.org/') Sunrise and sunset data by sunrise-sunset.org
+      
+      #clickContainer.widgetContainer 
+        #clickHeader.widgetHeader 
+          h2 Click! 
+          hr
+        #clickContent.widgetContent 
+          button#clickButton #{clickCount}
+    .right
+      #tweet
+        // Happy B-day percy!
+        blockquote.twitter-tweet
+          p(lang='en' dir='ltr')
+            | Happy Birthday, Percy Jackson. 
+            br
+            br
+            | Lighting up blue in your honor with 
+            a(href='https://twitter.com/DisneyPlus?ref_src=twsrc%5Etfw') @disneyplus
+            | . 
+            a(href='https://t.co/G29RefXsQ9') pic.twitter.com/G29RefXsQ9
+          | &mdash; Empire State Building (@EmpireStateBldg) 
+          a(href='https://twitter.com/EmpireStateBldg/status/1560348615830298624?ref_src=twsrc%5Etfw') August 18, 2022
+        script(async='' src='https://platform.twitter.com/widgets.js')
+      .widgetContainer
+        #countdownHeader.widgetHeader
+          h2 Time Until the End of the Semester
+          hr
+        .widgetContent
+          span#timeLeft

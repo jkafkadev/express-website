@@ -1,0 +1,18 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    link(rel='stylesheet' type='text/css' href='css/myStyle.css')
+    block title
+      title Base 
+    block scripts 
+  body
+    nav.mainNav
+      a(href='myAboutMe') About Me
+      a(href='myContacts') Contacts
+      a(href='myWidgets') Widgets
+      a(href='contactMe') Contact Me
+      a(href='contactLog') Contact Log
+      a(href='login') #{loginTitle}
+    block content 
+      | Base hello there

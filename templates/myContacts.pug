@@ -1,0 +1,101 @@
+extends base.pug
+
+block title 
+  title My Contacts 
+
+block scripts 
+  script(async defer src='js/myContacts.js')
+
+block content
+  h1 Contacts
+  #tableImage
+    table#contactsTable.contactTable
+      caption My Contacts
+      tr#contactTableHead.tableRow
+        th#tableName Name
+        th#tableLoc Location
+        th#tableInfo Contact Information
+        th#tableEmail email
+        th#tableSite website
+      tr#joanGabel.contactRow.tableRow
+        td.tableName Joan Gabel
+        td.tableLoc
+          address
+            | 202 Morrill Hall
+            br
+            | 100 Church Street SE
+            br
+            | Minneapolis, MN 55455
+          img.rowImg(src='images/morrill.jpg' alt='Morrill Hall')
+        td.tableInfo
+          | University of Minnesota
+          br
+          | President
+        td.tableEmail
+          a(href='mailto:upres@umn.edu') upres@umn.edu
+        td.tableSite
+          a(href='http://president.umn.edu') Home Page
+      tr#marcRiedel.contactRow.tableRow
+        td.tableName Marc Riedel
+        td.tableLoc
+          address
+            | 4-167 Keller Hall
+            br
+            | 200 Union Street SE
+            br
+            | Minneapolis, MN 55455
+          img.rowImg(src='images/keller.jpg' alt='Keller Hall')
+        td.tableInfo EE 2301 Professor
+        td.tableEmail
+          a(href='mailto:mriedel@umn.edu') mriedel@umn.edu
+        td.tableSite
+          a(href='https://cse.umn.edu/ece/marc-riedel') Marc&apos;s Webpage
+      tr#danielKluver.contactRow.tableRow
+        td.tableName Daniel Kluver
+        td.tableLoc
+          address
+            | Sheperd Labs
+            br
+            | 100 Union St SE
+            br
+            | Minneapolis, MN 55455
+          img.rowImg(src='images/Shepherd.jpg' alt='Shepherd Hall')
+        td.tableInfo
+          | Course Instructor
+          br
+          | CSCI 4131 Fall 2022
+        td.tableEmail
+          a(href='mailto:kluve018@umn.edu') kluve018@umn.edu
+        td.tableSite
+          a(href='https://cse.umn.edu/cs/daniel-kluver') CSE Staff Page
+      tr#aidenPederson.contactRow.tableRow
+        td.tableName Aiden Pederson
+        td.tableLoc
+          address
+            | 900 Washington Ave SE
+            br
+            | Apartment 223
+            br
+            | Minneapolis, MN 55414
+          img.rowImg(src='images/dinnaken.jpeg' alt='Dinnaken Residence')
+        td.tableInfo Jarod&apos;s Roommate
+        td.tableEmail
+          a(href='mailto:pede0821@umn.edu') pede0821@umn.edu
+        td.tableSite
+          a(href='https://www.bungie.net/') Aiden&apos;s Favorite Game
+      tr#brandonWagenfeld.contactRow.tableRow
+        td.tableName Brandon Wagenfeld
+        td.tableLoc
+          address
+            | 900 Washington Ave SE
+            br
+            | Apartment 223
+            br
+            | Minneapolis, MN 55414
+          img.rowImg(src='images/dinnaken.jpeg' alt='Dinnaken Residence')
+        td.tableInfo Jarod&apos;s Roommate
+        td.tableEmail
+          a(href='mailto:wagen115@umn.edu') wagen115@umn.edu
+        td.tableSite
+          a(href='https://metrocouncil.org') Met Council Website
+    img#locImage(src='images/gophers-mascot.png' alt='Dinnaken Residence')

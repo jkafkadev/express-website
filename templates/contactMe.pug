@@ -1,0 +1,59 @@
+extends base.pug
+block title 
+  title Contact Me 
+
+block scripts 
+  script(async defer src='js/contactMe.js')
+
+block content
+  #formCenter
+    form#contactForm(action='/contactMe' method='POST')
+      h1 Contact Me
+      #formDiv
+        #formLeft
+          label(for='formTitle')
+            | Title:
+            span.reqd *
+          input#formTitle(type='text' name='postTitle' required='')
+          br
+          label(for='formEmail')
+            | Email:
+            span.reqd *
+          input#formEmail(type='email' name='email' required='')
+          br
+          label(for='formUsername')
+            | Username:
+            span.reqd *
+          input#formUsername(type='text' name='username' required='')
+          br
+          label(for='formLink') Link:
+          input#formLink(type='url' name='link')
+          br
+          fieldset
+            legend
+              | Category of message:
+              span.reqd *
+            input#question(type='radio' name='category' value='question' checked='')
+            label(for='question') Question
+            br
+            input#comment(type='radio' name='category' value='comment')
+            label(for='comment') Comment
+            br
+            input#concern(type='radio' name='category' value='concern')
+            label(for='concern') Concern
+            br
+        #formRight
+          p
+            | In order to best address your concern, sure to
+            | list the specific way in which I have wronged you.
+          
+      #formBottom
+        label(for='message')
+          | Message:
+          span.reqd *
+        br
+        textarea#message(name='message' cols='50' required='')
+        br
+        input(type='submit' value='submit')
+        if msg 
+          p #{msg}
